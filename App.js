@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Button, FlatList, Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 import { Feather } from "@expo/vector-icons";
 
 export default function App() {
@@ -30,6 +31,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <StatusBar hidden={true} />
       <Text style={styles.title}>To-Do List</Text>
       <View style={styles.inputRow}>
         <TextInput  style={styles.input} placeholder="Add To-Do List Item" value={item} onChangeText={setItem}></TextInput>
